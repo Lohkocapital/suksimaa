@@ -10,10 +10,14 @@ connection_url = 'mysql+mysqlconnector://root:W3bkaksi.0@54.228.193.255/suksimaa
 engine = create_engine(connection_url)
 print(f'Tietokantayhteys avattu {aika}')
 
+df1 = pd.read_csv('/Users/sami/Dropbox/Lohko Capital/polar/spsoittaaclean.csv')
+print(df1.head())
+
 # query = input(f"Anna kysely: ")
 # print(f'Kysely on: {query}')
-query = "SELECT * FROM oittaa1"
+# query = "SELECT * FROM oittaa1"
+# df = pd.read_sql(query, con=engine)
 
-df = pd.read_sql(query, con=engine)
-print(df.head())
-print(df.tail())
+
+# print(df.head())
+# print(df.tail())
